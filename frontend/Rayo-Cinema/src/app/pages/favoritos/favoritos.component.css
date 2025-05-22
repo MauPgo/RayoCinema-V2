@@ -1,0 +1,63 @@
+:host {
+    display: block;
+    background-color: white;
+    min-height: 100vh;
+}
+
+
+.card-img-top {
+    border-radius: 30px !important;
+    padding: 20px;
+    height: 350px;
+    object-fit: cover;
+}
+
+#menuPrincipal {
+    color: white;
+}
+
+#menuPrincipal a:hover{
+    color: violet;
+}
+
+.active{
+    color: #fede02 !important   ;
+}
+
+.card {
+    border-radius: 30px !important;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card-title {
+    font-size: 25px;
+    color: #ed7b09 !important;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-body {
+    padding: 25px;
+    margin-top: -15px;
+}
+
+.btn-primary {
+    border-radius: 50px;
+    width: 150px;
+}
+
+.btn-primary:hover {
+    background-color: black;
+}
+
+h3, h5 {
+    color: rgb(0, 91, 221);
+}
+
+.fav-icon {
+    cursor: pointer;
+    font-size: 24px;
+    margin-left: 10px;
+    color: red;
+}
+

@@ -1,0 +1,31 @@
+<!-- Estilos externos de Swiper (opcional si ya los importas en Angular.json o con npm) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Encabezado -->
+<div class="search container">
+  <div class="search-txt">
+    <img src="assets/images/logo.svg" alt="Logo" width="40" height="30">
+    <h2>RayoCinema</h2>
+  </div>
+  <button class="btn" (click)="goToLogin()">Inicia Sesión</button>
+</div>
+
+<!-- Sección de bienvenida -->
+<div class="movie container">
+  <h2>Bienvenido al sitio de películas que combina el contenido de todas tus plataformas favoritas</h2>
+  <h2>¡Trae tus palomitas y ponte en acción!</h2>
+
+  <br><br><br>
+
+  <h2>Algo de nuestra selección</h2>
+
+  <!-- Swiper Carousel -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" *ngFor="let pelicula of topMovies">
+        <img [src]="pelicula.imagen" alt="Película">
+      </div>
+    </div>
+  </div>
+</div>

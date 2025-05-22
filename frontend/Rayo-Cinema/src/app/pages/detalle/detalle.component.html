@@ -1,0 +1,59 @@
+<!-- Navbar -->
+<nav class="navbar justify-content-between p-3 bg-dark text-white" id="menuPrincipal">
+    <div class="d-flex align-items-center">
+      <img src="assets/images/logo.svg" alt="logo" width="40" height="25" class="d-inline-block align-text-top me-2" />
+      <h5 class="me-4 text-white">RayoCinema</h5>
+      <a routerLink="/index" class="nav-link mx-4 text-white">Home</a>
+      <a routerLink="/favoritos" class="nav-link mx-4 text-white">Favoritos</a>
+      <a routerLink="/series" class="nav-link mx-4 text-white">Series</a>
+      <a routerLink="/peliculas" class="nav-link mx-4 text-white">Peliculas</a>
+    </div>
+    <div>
+      <button class="btn btn-danger" (click)="logout()">Cerrar Sesión</button>
+    </div>
+  </nav>
+  
+  <!-- Detalles de la película -->
+  <div class="container py-5" *ngIf="pelicula">
+    <h3 class="mb-4 text-center">Detalles de la película</h3>
+    <div class="card mx-auto" style="max-width: 600px;">
+      <img [src]="pelicula.imagen" class="card-img-top" [alt]="pelicula.titulo" />
+      <div class="card-body">
+        <h2 class="card-title text-center">{{ pelicula.titulo }}</h2>
+        <p class="card-text text-center">{{ pelicula.descripcion }}</p>
+        <h4 class="text-center">
+          <i class="fas fa-star text-warning"></i> {{ pelicula.calificacion }}
+        </h4>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Películas recomendadas -->
+  <div class="container my-5" *ngIf="recomendadas.length > 0">
+    <h3 class="text-center my-4">Películas Recomendadas</h3>
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+      <div class="col" *ngFor="let peli of recomendadas">
+        <div class="card h-100">
+          <img [src]="peli.imagen" class="card-img-top" [alt]="peli.titulo" />
+          <div class="card-body">
+            <h5 class="card-title">{{ peli.titulo }}</h5>
+            <p class="card-text text-center">
+              <i class="fas fa-star text-warning"></i> {{ peli.calificacion }}
+            </p>
+            <a [routerLink]="['/detalle', peli.id]" class="btn btn-sm btn-outline-primary d-block mx-auto">Ver</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Botón volver -->
+  <div class="text-center my-4">
+    <a routerLink="/index" class="btn btn-secondary">Regresar</a>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="text-center text-lg-start mt-4 bg-dark text-white">
+    <div class="text-center p-3">Derechos Reservados</div>
+  </footer>
+  

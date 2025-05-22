@@ -1,0 +1,41 @@
+<!-- Navbar -->
+<nav class="navbar justify-content-between p-3 bg-dark text-white" id="menuPrincipal">
+    <div class="d-flex align-items-center">
+      <img src="assets/images/logo.svg" alt="logo" width="40" height="25" class="d-inline-block align-text-top me-2" />
+      <h5 class="me-4 text-white">RayoCinema</h5>
+      <a routerLink="/index" class="nav-link mx-4 text-white">Home</a>
+      <a routerLink="/favoritos" class="nav-link mx-4 text-white">Favoritos</a>
+      <a routerLink="/series" class="nav-link mx-4 text-white">Series</a>
+      <a routerLink="/peliculas" class="nav-link mx-4 active text-white">Peliculas</a>
+    </div>
+    <div>
+      <button class="btn btn-danger" (click)="logout()">Cerrar Sesión</button>
+    </div>
+  </nav>
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Películas</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col" *ngFor="let pelicula of peliculas">
+        <div class="card h-100">
+          <img [src]="pelicula.imagen" class="card-img-top" [alt]="pelicula.titulo" />
+          <div class="card-body">
+            <h5 class="card-title text-center">{{ pelicula.titulo }}</h5>
+            <h4 class="text-center">
+              <i class="fas fa-star text-warning"></i> {{ pelicula.calificacion }}
+            </h4>
+            <br />
+            <div class="text-center">
+              <button class="btn btn-primary" (click)="irADetalle(pelicula.id)">Ver</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center text-lg-start mt-4 bg-dark text-white">
+    <div class="text-center p-3">Derechos Reservados</div>
+  </footer>
+  

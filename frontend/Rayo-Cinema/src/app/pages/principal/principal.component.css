@@ -1,0 +1,85 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background: linear-gradient(0deg, rgb(19, 19, 145) 35%, rgba(46, 105, 170, 1) 100%);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:host ::ng-deep * {
+  box-sizing: border-box;
+}
+
+.btn {
+  width: 15%;
+  height: 45px;
+  background-color: white;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container h2 {
+  color: white;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.search {
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search i {
+  font-size: 25px;
+  color: white;
+}
+
+.search-txt {
+  display: flex;
+  align-items: center;
+}
+
+.search-txt h2 {
+  color: white;
+  font-size: 30px;
+  margin-left: 10px;
+}
+
+.movie h2 {
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: white;
+  text-align: center;
+}
+
+/* Swiper Styles */
+:host ::ng-deep .swiper {
+  margin-top: 20px;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+:host ::ng-deep .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 250px;
+  transition: transform 0.3s ease-in-out;
+}
+
+:host ::ng-deep .swiper-slide img {
+  display: block;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
