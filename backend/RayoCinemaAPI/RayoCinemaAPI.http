@@ -1,0 +1,6 @@
+@RayoCinemaAPI_HostAddress = http://localhost:5250
+
+GET {{RayoCinemaAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
