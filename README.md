@@ -1,9 +1,9 @@
 # 1. Título, Descripción y Objetivo
-## Título: 
+### Título: 
 RayoCinema
-## Descripción: 
+### Descripción: 
 Es un sitio de peliculas y series que contiene los títulos de todas tus plataformas favoritas.
-## Objetivo: 
+### Objetivo: 
 Implementación del login con backend, manejo de CORS implementado, documentación con Swagger y mejoras a consideración.
 
 # 2. Nombre:
