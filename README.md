@@ -42,14 +42,14 @@ Como ya tenía conectado el login con la bd me faltaba hacer el registro porque 
 Listado dinámico de películas y series desde la base de datos ya que ahora solo es en el localstorage, página de perfil del usuario, búsqueda o filtros por género, nombre.
 
 # 11. Documentación de swagger:
-## URL Base: 
+### URL Base: 
 http://localhost:5250/swagger/index.html
 
-## Endpoints disponibles:
+### Endpoints disponibles:
 /api/Usuarios/login  
 /api/Usuarios/registro
 
-## Login de usuario:
+### Login de usuario:
 Body (JSON)  
 {  
   "correo": "usuario@ejemplo.com",  
@@ -67,7 +67,7 @@ Respuesta exitosa (200)
 Error (401)  
 Usuario o contraseña incorrectos  
 
-## Registro de usuario:
+### Registro de usuario:
 Body (JSON)  
 {  
   "nombre": "Nuevo Usuario",  
