@@ -119,8 +119,9 @@ kubectl apply -f service.yaml
 Esta vez no hubo muchas complicaciones, solamente algunos problemas para lograr la conexión del nuevo componente de registro con el end point pero nada grave.
 
 # 14. Retrospectiva: 
-## Que hice bien? 
+### Que hice bien? 
 Tener bien definidas las funcionalidades que quería agregar para optimizar bien el tiempo. 
-## Que hice mal? 
+### Que hice mal? 
 No lograr que las películas y series ya se guarden en la bd y no sean arrays así como el manejo de las mismas en la parte de favoritos. 
-## Que puedo hacer diferente? Seguir mejorando en cada sprint contemplando lo que quiero hacer para dosificar bien mi tiempo y definir tareas que sean alcanzables en el tiempo definido.
+### Que puedo hacer diferente? 
+Seguir mejorando en cada sprint contemplando lo que quiero hacer para dosificar bien mi tiempo y definir tareas que sean alcanzables en el tiempo definido.
