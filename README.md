@@ -45,7 +45,7 @@ Listado dinámico de películas y series desde la base de datos ya que ahora sol
 http://localhost:5250/swagger/index.html
 
 ## Endpoints disponibles:
-/api/Usuarios/login
+/api/Usuarios/login  
 /api/Usuarios/registro
 
 ## Login de usuario:
