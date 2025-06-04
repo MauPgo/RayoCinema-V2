@@ -15,6 +15,7 @@ Pedro Mauricio Godinez Ortiz
 # 4. Screenshots: 
 <img width="1438" alt="principal" src="https://github.com/user-attachments/assets/39cb2152-f5db-4dc0-a9fa-5ea4723ce646" />
 <img width="1438" alt="login" src="https://github.com/user-attachments/assets/d970f403-7eb6-409a-b25b-87c63afb930c" />
+<img width="1440" alt="registro" src="https://github.com/user-attachments/assets/ea559b1c-c96f-4f77-95f7-51b63ac98092" />
 <img width="1440" alt="index" src="https://github.com/user-attachments/assets/ffd800a5-ebc0-47f5-8ebc-c91517d13056" />
 <img width="1440" alt="fav" src="https://github.com/user-attachments/assets/df9f220d-4ff8-4336-b8f8-c824d7d2b839" />
 <img width="1440" alt="series" src="https://github.com/user-attachments/assets/f0b24629-e745-4234-8365-f917d534ea6d" />
