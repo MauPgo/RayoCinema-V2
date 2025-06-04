@@ -1,8 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-import { Router } from '@angular/router';
-
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-favoritos',
@@ -11,63 +9,30 @@ import { Router } from '@angular/router';
   templateUrl: './favoritos.component.html',
   styleUrls: ['./favoritos.component.css']
 })
-
-//crear el array de las películas
-export class FavoritosComponent {
-  peliculas = [
-    {
-      id: 2,
-      titulo: "COBRA KAI",
-      imagen: "assets/images/cobra.webp",
-      calificacion: 4.8,
-      descripcion: "Una saga mágica de aventuras en Hogwarts"
-  },
-  {
-      id: 4,
-      titulo: "ORANGE",
-      imagen: "assets/images/orange.webp",
-      calificacion: 3.5,
-      descripcion: "Una saga mágica de aventuras en Hogwarts"
-  },
-  {
-      id: 6,
-      titulo: "YOU",
-      imagen: "assets/images/you.jpeg",
-      calificacion: 3.0,
-      descripcion: "Una saga mágica de aventuras en Hogwarts"
-  },
-  {
-      id: 7,
-      titulo: "MINECRAFT",
-      imagen: "assets/images/minecraft.avif",
-      calificacion: 5.0,
-      descripcion: "Una saga mágica de aventuras en Hogwarts"
-  },
-  {
-      id: 9,
-      titulo: "AVENGERS",
-      imagen: "assets/images/avengers.webp",
-      calificacion: 4.2,
-      descripcion: "Una saga mágica de aventuras en Hogwarts"
-  },
-  {
-      id: 11,
-      titulo: "COMO ENTRENAR A TU DRAGON",
-      imagen: "assets/images/dragon.webp",
-      calificacion: 4.2,
-      descripcion: "Una saga mágica de aventuras en Hogwarts"
-  }
-  ];
+export class FavoritosComponent implements OnInit {
+  peliculas: any[] = [];
 
   constructor(private router: Router) {}
 
-  //función que recibe el id como parámetro y te redirige a detalle con el id de la película
-  irADetalle(id: number) {
-    this.router.navigate([`/detalle`, id]);
+  ngOnInit() {
+    this.obtenerFavoritos();
   }
 
-  //función que te redirige a login al dar click en cerrar sesión
-logout(): void {
-  this.router.navigate(['/login']);
-}
+  obtenerFavoritos() {
+    const favoritos = localStorage.getItem('favoritos');
+    this.peliculas = favoritos ? JSON.parse(favoritos) : [];
+  }
+
+  irADetalle(id: number) {
+    this.router.navigate(['/detalle', id]);
+  }
+
+  logout(): void {
+    this.router.navigate(['/login']);
+  }
+
+  eliminarFavorito(id: number) {
+    this.peliculas = this.peliculas.filter(p => p.id !== id);
+    localStorage.setItem('favoritos', JSON.stringify(this.peliculas));
+  }
 }

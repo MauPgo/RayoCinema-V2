@@ -28,7 +28,8 @@ export class AuthService {
     return this.http.post(`${this.apiUrl}/login`, payload);
   } 
 
-  registro(usuario: Usuario): Observable<any> {
-    return this.http.post(`${this.apiUrl}/registro`, usuario);
+  registrar(usuario: any) {
+    return this.http.post('http://localhost:5250/api/Usuarios/registro', usuario);
   }
+  
 }

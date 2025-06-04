@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rayo-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rayo-backend
+  template:
+    metadata:
+      labels:
+        app: rayo-backend
+    spec:
+      containers:
+        - name: rayo-backend
+          image: rayo-backend:latest
+          ports:
+            - containerPort: 80
+          resources:
+            limits:
+              memory: "512Mi"
+              cpu: "500m"

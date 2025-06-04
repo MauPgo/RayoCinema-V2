@@ -31,12 +31,11 @@
 
     <button class="btn" type="submit">Iniciar Sesión</button>
 
-    <div class="register-link">
-      <a href="#">Regístrate</a>
-    </div>
-
     <div *ngIf="error" style="color: red; margin-top: 10px;">
       {{ error }}
     </div>
   </form>
+  <div class="register-link">
+    <a routerLink="/registro">Regístrate</a>
+  </div>
 </div>

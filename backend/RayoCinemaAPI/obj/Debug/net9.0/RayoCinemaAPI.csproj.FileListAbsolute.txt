@@ -320,3 +320,4 @@
 /Users/mauricio/Desktop/Rayo Cinema/backend/RayoCinemaAPI/obj/Debug/net9.0/RayoCinemaAPI.pdb
 /Users/mauricio/Desktop/Rayo Cinema/backend/RayoCinemaAPI/obj/Debug/net9.0/RayoCinemaAPI.genruntimeconfig.cache
 /Users/mauricio/Desktop/Rayo Cinema/backend/RayoCinemaAPI/obj/Debug/net9.0/ref/RayoCinemaAPI.dll
+/Users/mauricio/Desktop/Rayo Cinema/backend/RayoCinemaAPI/obj/Debug/net9.0/RayoCinemaAPI.sourcelink.json
