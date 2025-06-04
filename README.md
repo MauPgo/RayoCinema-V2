@@ -49,40 +49,40 @@ http://localhost:5250/swagger/index.html
 /api/Usuarios/registro
 
 ## Login de usuario:
-Body (JSON)
-{
-  "correo": "usuario@ejemplo.com",
-  "contrasena": "123456"
-}
+Body (JSON)  
+{  
+  "correo": "usuario@ejemplo.com",  
+  "contrasena": "123456"  
+}  
 
-Respuesta exitosa (200)
-{
-  "id": 1,
-  "nombre": "Nombre de Usuario",
-  "correo": "usuario@ejemplo.com",
-  "contrasena": "123456"
-}
+Respuesta exitosa (200)  
+{  
+  "id": 1,  
+  "nombre": "Nombre de Usuario",  
+  "correo": "usuario@ejemplo.com",  
+  "contrasena": "123456"  
+}  
 
-Error (401)
-Usuario o contraseña incorrectos
+Error (401)  
+Usuario o contraseña incorrectos  
 
 ## Registro de usuario:
-Body (JSON)
-{
-  "nombre": "Nuevo Usuario",
-  "correo": "nuevo@correo.com",
-  "contrasena": "123456"
-}
+Body (JSON)  
+{  
+  "nombre": "Nuevo Usuario",  
+  "correo": "nuevo@correo.com",  
+  "contrasena": "123456"  
+}  
 
-Respuesta exitosa (200)
-{
-  "id": 2,
-  "nombre": "Nuevo Usuario",
-  "correo": "nuevo@correo.com",
-  "contrasena": "123456"
-}
+Respuesta exitosa (200)  
+{  
+  "id": 2,  
+  "nombre": "Nuevo Usuario",  
+  "correo": "nuevo@correo.com",  
+  "contrasena": "123456"  
+}  
 
-Error (400)
+Error (400)  
 El correo ya está registrado.
 
 <img width="1440" alt="swagger" src="https://github.com/user-attachments/assets/3ef8eb6f-f437-4097-bd39-ebf5b88256cb" />
@@ -106,7 +106,7 @@ docker-compose up
 ## Kubernetes
 
 ### Cómo desplegar kubernetes
-kubectl apply -f deployment.yaml
+kubectl apply -f deployment.yaml  
 kubectl apply -f service.yaml
 
 ### deployment.yaml
@@ -119,4 +119,8 @@ kubectl apply -f service.yaml
 Esta vez no hubo muchas complicaciones, solamente algunos problemas para lograr la conexión del nuevo componente de registro con el end point pero nada grave.
 
 # 14. Retrospectiva: 
-Que hice bien? Tener bien definidas las funcionalidades que quería agregar para optimizar bien el tiempo. Que hice mal? No lograr que las películas y series ya se guarden en la bd y no sean arrays así como el manejo de las mismas en la parte de favoritos. Que puedo hacer diferente? Seguir mejorando en cada sprint contemplando lo que quiero hacer para dosificar bien mi tiempo y definir tareas que sean alcanzables en el tiempo definido.
+## Que hice bien? 
+Tener bien definidas las funcionalidades que quería agregar para optimizar bien el tiempo. 
+## Que hice mal? 
+No lograr que las películas y series ya se guarden en la bd y no sean arrays así como el manejo de las mismas en la parte de favoritos. 
+## Que puedo hacer diferente? Seguir mejorando en cada sprint contemplando lo que quiero hacer para dosificar bien mi tiempo y definir tareas que sean alcanzables en el tiempo definido.
